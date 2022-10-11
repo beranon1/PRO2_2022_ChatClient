@@ -57,7 +57,7 @@ public class MainFrame extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
-        JTextArea txtChat = new JTextArea();
+        txtChat = new JTextArea();
         txtChat.setEditable(false);
         JScrollPane scrollPanel = new JScrollPane(txtChat);
 
