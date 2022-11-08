@@ -3,10 +3,18 @@ import models.chatClients.FileChatClient;
 import models.chatClients.InMemoryChatClient;
 import models.chatClients.fillOperations.ChatFileOperations;
 import models.chatClients.fillOperations.jsonChatFileOperations;
+import models.database.DBImitializer;
 import models.gui.MainFrame;
 
 public class Main {
     public static void main(String[] args) {
+
+        String databaseDriver = "org.apache.derby.jdbc.EmbeddedDriver";
+
+        String databaseUrl = "jdbc:derby:ChatClientDb_skB";
+
+        DBImitializer dbImitializer = new DBImitializer(databaseDriver, databaseUrl);
+        dbImitializer.init();
 
         ChatFileOperations chatFileOperations = new jsonChatFileOperations();
 
